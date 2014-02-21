@@ -1,7 +1,7 @@
 import json, datetime, time, re, requests 
+yourClientId = "XXX"
 
 pages = "["
-yourClientId = "XXX"
 location = "604145"#Rag and Famish North Sydney!
 api = "https://api.instagram.com/v1/locations/{0}/media/recent?client_id={1}".format(location,yourClientId)
 while True:
