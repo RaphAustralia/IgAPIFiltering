@@ -43,14 +43,13 @@ def getLocationObject(index):
         index += 1
     index -= 1;
     endIndex = index
-    while True:
+    index -= 1
+    while retentionCount != -1:
         if pages[index] == "}":
             retentionCount += 1
         elif pages[index] == "{":
             retentionCount -= 1
         index -= 1
-        if retentionCount == 0:
-            break
     startIndex = index + 1
     objectJson = pages[startIndex:endIndex +1]
     return json.loads(objectJson)
